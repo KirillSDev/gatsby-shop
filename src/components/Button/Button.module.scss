@@ -1,0 +1,33 @@
+@use "@sass/colors.scss" as colors;
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  font-size: 1em;
+  font-weight: 500;
+  color: colors.$white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.2s linear, color 0.5s;
+  &__primary {
+    background-color: colors.$primary;
+  }
+  &__unprimary {
+    background-color: colors.$unprimary;
+  }
+  &__small {
+    max-width: 100px;
+  }
+  &__middle {
+    max-width: 150px;
+  }
+  &__large {
+    max-width: 200px;
+  }
+}
+.button:hover,
+:focus {
+  background-color: colors.$gray;
+  color: black;
+}
