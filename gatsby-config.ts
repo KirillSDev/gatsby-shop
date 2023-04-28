@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -8,6 +9,7 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-sass",
+
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
@@ -35,6 +37,16 @@ const config: GatsbyConfig = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "src/components"),
+          "@sass": path.resolve(__dirname, "src/assets/sass"),
+        },
+        extensions: [],
+      },
     },
   ],
 };
