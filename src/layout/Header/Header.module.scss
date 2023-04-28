@@ -1,0 +1,13 @@
+@use "@sass/colors.scss" as colors;
+
+.container {
+  background-color: colors.$light-gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+}
