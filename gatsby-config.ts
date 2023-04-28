@@ -44,6 +44,7 @@ const config: GatsbyConfig = {
         alias: {
           "@components": path.resolve(__dirname, "src/components"),
           "@sass": path.resolve(__dirname, "src/assets/sass"),
+          "@assets": path.resolve(__dirname, "src/assets"),
         },
         extensions: [],
       },
