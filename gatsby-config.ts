@@ -9,6 +9,14 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "RickAndMorty",
+        fieldName: "rickAndMorty",
+        url: "https://rickandmortyapi.com/graphql",
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         cssLoaderOptions: {
