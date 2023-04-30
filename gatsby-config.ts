@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon.svg",
       },
     },
     "gatsby-plugin-mdx",
@@ -59,6 +59,9 @@ const config: GatsbyConfig = {
           "@components": path.resolve(__dirname, "src/components"),
           "@sass": path.resolve(__dirname, "src/assets/sass"),
           "@assets": path.resolve(__dirname, "src/assets"),
+          "@interfaces": path.resolve(__dirname, "src/interfaces"),
+          "@utils": path.resolve(__dirname, "src/utils"),
+          "@layout": path.resolve(__dirname, "src/layout"),
         },
         extensions: [],
       },
