@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "gatsby-shop",
-  "author": "Kirill Starodubsev",
+  "author": "Kirill Starodubtsev",
   "keywords": [
     "gatsby"
   ],
@@ -16,6 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.13",
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.9.0",
     "gatsby-plugin-image": "^3.9.0",
