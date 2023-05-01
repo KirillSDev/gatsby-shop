@@ -1,0 +1,20 @@
+@use "@sass/colors.scss" as colors;
+
+.container {
+  background-color: colors.$light-gray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid colors.$gray;
+  .title {
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: 700;
+    color: colors.$green;
+    text-decoration: none;
+    text-shadow: 0 0 2px colors.$unprimary, 0 0 2px colors.$unprimary,
+      0 0 2px colors.$unprimary, -1px -1px 2px colors.$green,
+      -1px -1px 2px colors.$green, -1px -1px 2px colors.$green;
+  }
+}

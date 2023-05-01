@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -7,13 +8,28 @@ const config: GatsbyConfig = {
   },
   graphqlTypegen: true,
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "RickAndMorty",
+        fieldName: "rickAndMorty",
+        url: "https://rickandmortyapi.com/graphql",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          camelCase: true,
+        },
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/icon.svg",
       },
     },
     "gatsby-plugin-mdx",
@@ -35,6 +51,21 @@ const config: GatsbyConfig = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "src/components"),
+          "@sass": path.resolve(__dirname, "src/assets/sass"),
+          "@assets": path.resolve(__dirname, "src/assets"),
+          "@interfaces": path.resolve(__dirname, "src/interfaces"),
+          "@utils": path.resolve(__dirname, "src/utils"),
+          "@layout": path.resolve(__dirname, "src/layout"),
+          "@api": path.resolve(__dirname, "src/api"),
+        },
+        extensions: [],
+      },
     },
   ],
 };
