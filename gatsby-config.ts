@@ -62,6 +62,7 @@ const config: GatsbyConfig = {
           "@interfaces": path.resolve(__dirname, "src/interfaces"),
           "@utils": path.resolve(__dirname, "src/utils"),
           "@layout": path.resolve(__dirname, "src/layout"),
+          "@api": path.resolve(__dirname, "src/api"),
         },
         extensions: [],
       },
