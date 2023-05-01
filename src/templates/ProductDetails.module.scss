@@ -1,0 +1,54 @@
+@use "@sass/colors.scss" as colors;
+.container {
+  background-color: colors.$green;
+  height: calc(100vh - 160px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.imgBox {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 5px;
+  font-size: 1.1em;
+  font-weight: 900;
+  color: colors.$white;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgBox {
+    position: relative;
+    height: 200px;
+    width: 200px;
+  }
+
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+}
