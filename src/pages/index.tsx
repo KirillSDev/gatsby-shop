@@ -5,7 +5,7 @@ import { Layout } from "../layout/Layout";
 import { navigate, Link } from "gatsby";
 import { ItemProduct } from "@components/ItemProduct/ItemProduct";
 import { Character } from "../interfaces/Product.interface";
-import { useAllCharacters } from "@api/allCharacters";
+import { useAllCharacters } from "@queries/allCharacters";
 import * as styles from "./index.module.scss";
 import { getImage } from "gatsby-plugin-image";
 const IndexPage: React.FC<PageProps> = () => {
