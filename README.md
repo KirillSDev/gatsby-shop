@@ -1,5 +1,7 @@
 # gatsby-shop
 
+https://gatsby-shop-nu.vercel.app/
+
 ### Currently the project uses
 * Gatsby.js
 * TypeScript
