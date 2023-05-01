@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, HeadFC, PageProps } from "gatsby";
-import * as styles from "./cart.module.scss";
+import * as styles from "./Cart.module.scss";
 const Cart: React.FC<PageProps> = () => {
   return (
     <div className={styles.container}>
