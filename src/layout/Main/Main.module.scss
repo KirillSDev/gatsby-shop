@@ -1,0 +1,12 @@
+@use "@sass/colors.scss" as colors;
+.container {
+  background-color: colors.$white;
+  height: calc(100% - 60px);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.main {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
